@@ -1,29 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import ReadingList from "./ReadingList";
 
 const Home = () => {
-    const [readings, setReadings] = useState([
-        // API readings?'
-        { level: 20, date: '1-3 18.00.00', id: 1 }
-    ]);
+    const [readings, setReadings] = useState(null);
 
-   
+    useEffect(() => {
+        fetch('http://127.0.0.1:5000', {
+            mode: 'no-cors'
+        })
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                setReadings(data);
+            });   
+        }, []);
+
 
     return ( 
         <div className="home">   
-            {readings.map((reading) => (
-                <div className="reading-preview" key={reading.id}>
-                    <h2>Water level: {reading.level}</h2>
-                    <p>{reading.date}</p>
-        
-                </div>
-
-            
-            
-            ))}     
-               
-            
-        </div>
+            {readings && <ReadingList readings={readings} title = "All readings!" />}    
+        </div>  
      );
 }
- 
+
 export default Home;
