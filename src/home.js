@@ -1,31 +1,9 @@
-import { useState, useEffect } from "react";
 import ReadingList from "./ReadingList";
+import useFetch from "./usefetch";
 
 const Home = () => {
-    const [readings, setReadings] = useState(null);
-    const [isPending, setIsPending] = useState(true);
-    const [error, setError] = useState(null); 
+    const {data: readings, isPending, error} = useFetch('http://127.0.0.1:5000/recent1');  
     
-    useEffect(() => {
-        fetch('http://localhost:5000/recent1')
-            .then(res => {
-                if(!res.ok){
-                    throw Error('Could not fetch data')
-                }
-                return res.json();
-            })
-            .then(data => {
-                setReadings(data);
-                setIsPending(false);
-                setError(null);
-            })
-            .catch(err => {
-                setError(err.message);
-                setIsPending(false);
-            })
-        }, []);
-
-
     return ( 
         <div className="home">   
             {error && <div>{ error }</div>}

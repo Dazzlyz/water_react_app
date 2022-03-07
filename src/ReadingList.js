@@ -1,16 +1,6 @@
-const ReadingList = ({readings, title}) => {   
-    
-    // const data = readings
-    
-    // console.log(Object.entries(data));
+import { Link } from "react-router-dom";
 
-    // const result = Object.entries(data).map(([key, value]) => {
-    //     console.log(key);
-    //     console.log(value);
-    //     return {[key]: value};
-    // });
-
-    // console.log(result);
+const ReadingList = ({readings, title}) => {     
     
     return (
         <div className="reading-list">
@@ -18,9 +8,11 @@ const ReadingList = ({readings, title}) => {
             {readings.map((reading) => (              
                 
             <div className="reading-preview" key={reading.id}>
-                     <h1>Water level: {reading.level}</h1>
-                     <h2>System temperature: {reading.temperature}</h2>
-                     <p>{reading.time}</p>                 
+                    <Link to ={`/readings/${readings.id}`}>
+                        <h1>Water level: {reading.level}</h1>
+                        <h2>System temperature: {reading.temperature}</h2>
+                        <p>{reading.time}</p>    
+                    </Link>             
             </div>      
         ))}       
         </div>
@@ -28,24 +20,3 @@ const ReadingList = ({readings, title}) => {
 }
  
 export default ReadingList;
-
-
-// const obj = {
-//     name: 'James',
-//     country: 'Chile',
-//   };
-  
-//   // 👇️ ['name', 'country']
-//   console.log(Object.keys(obj));
-  
-//   const result = Object.keys(obj).map(key => {
-//     console.log(key); // 👉️ name, country
-//     console.log(obj[key]); // 👉️ James, Chile
-  
-//     return {[key]: obj[key]};
-//   });
-  
-//   // 👇️ [{name: 'James'}, {country: 'Chile'}]
-//   console.log(result);
-
-// export default ReadingList;
