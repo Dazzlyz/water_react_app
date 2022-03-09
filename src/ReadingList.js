@@ -8,7 +8,7 @@ const ReadingList = ({readings, title}) => {
             {readings.map((reading) => (              
                 
             <div className="reading-preview" key={reading.id}>
-                    <Link to ={`/readings/${readings.id}`}>
+                    <Link to ={`/readings/${reading.id}`}>
                         <h1>Water level: {reading.level}</h1>
                         <h2>System temperature: {reading.temperature}</h2>
                         <p>{reading.time}</p>    

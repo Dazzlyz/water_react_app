@@ -6,6 +6,8 @@ import AllReadings from './AllReadings';
 import ReadingDetail from './ReadingDetails';
 import Contact from './contact';
 import NotFound from './NotFound';
+import TwoHours from './twohours';
+import TwoDays from './twodays';
 
 function App() {
   
@@ -17,8 +19,10 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />            
             <Route path='/allreadings' element={<AllReadings />} />             
-            <Route path='/readings/:id' element={<ReadingDetail/>} />           
-            <Route path='/contact' element={<Contact/>} />          
+            <Route path='/readings/:id' element={<ReadingDetail/>} />     
+            <Route path='/2hours' element={<TwoHours/>} />  
+            <Route path='/2days' element={<TwoDays/>} />   
+            <Route path='/contact' element={<Contact/>} />       
             <Route path='*' element={<NotFound/>} />            
           </Routes>
         </div>

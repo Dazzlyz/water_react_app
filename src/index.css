@@ -53,15 +53,15 @@
   text-decoration: none;
 }
 
-.reading-details h1 {
-  font-size: 20px;
+.readings-details h1 {
+  font-size: 40px;
   color: #f1356d;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
-.reading-details div {
-  margin: 20px 0;
+.readings-details div {
+  margin: 10px 0;
 }
-.reading-details button {
+.readings-details button {
   background: #f1356d;
   color: #fff;
   border: 0;
