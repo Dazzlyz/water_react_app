@@ -1,13 +1,13 @@
 import './App.css';
-import Navbar from './navbar';
-import Home from './home';
+import Navbar from './Navbar';
+import Home from './Home';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import AllReadings from './AllReadings';
 import ReadingDetail from './ReadingDetails';
-import Contact from './contact';
+import Contact from './Contact';
 import NotFound from './NotFound';
-import TwoHours from './twohours';
-import TwoDays from './twodays';
+import TwoHours from './TwoHours';
+import TwoDays from './TwoDays';
 
 function App() {
   
@@ -18,7 +18,7 @@ function App() {
         <div className='content'>
           <Routes>
             <Route path='/' element={<Home />} />            
-            <Route path='/allreadings' element={<AllReadings />} />             
+            <Route path='/readings' element={<AllReadings />} />             
             <Route path='/readings/:id' element={<ReadingDetail/>} />     
             <Route path='/2hours' element={<TwoHours/>} />  
             <Route path='/2days' element={<TwoDays/>} />   

@@ -1,16 +1,13 @@
-import ReadingList from "./ReadingList";
-import useFetch from "./usefetch";
+import Reading from "./Readings";
 
 const Home = () => {
-    const {data: readings, isPending, error} = useFetch('http://127.0.0.1:5000/recent1');  
-    
-    return ( 
-        <div className="home">   
-            {error && <div>{ error }</div>}
-            {isPending && <div>Loading......</div>}
-            {readings && <ReadingList readings={readings} title = "Past 24 hours" />}    
-        </div>  
-     );
+    return(
+        <Reading
+            link = '/recent1' 
+            name = 'home' 
+            title = 'Past 24 hours' 
+        />   
+    );
 }
 
 export default Home;

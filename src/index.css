@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /* base styles */
 * {
@@ -49,7 +49,7 @@
   color: #f1356d;
   margin-bottom: 8px;
 }
-.reading-preview a{
+.reading-preview a {
   text-decoration: none;
 }
 
@@ -82,9 +82,11 @@
 .contact h2 {
   font-size: 20px;
   color: #f1356d;
-  margin-bottom:  30px;
+  margin-bottom: 30px;
 }
-.contact input, .contact textarea, .contact select {
+.contact input,
+.contact textarea,
+.contact select {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
@@ -100,7 +102,3 @@
   border-radius: 8px;
   cursor: pointer;
 }
-
-
-
-

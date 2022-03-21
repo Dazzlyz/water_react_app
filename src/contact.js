@@ -5,20 +5,20 @@ const Contact = () => {
     const [subject, setSubject] = useState('Enter the subject here');
     const [message, setMessage] = useState('Enter your message here');
     const [sender, setSender] = useState('');
-    const [isPending, setIsPending] = useState(false);    
+    const [isPending] = useState(false);    
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const contactform = { subject, message, sender};
         console.log(contactform)
-
+        navigate('/')
         // setIsPending(true);
 
         // save in textfile later on submit event? 
         // enter submit data
         // setisPending(false); // after submitting
-        {navigate('/')}
+       
     }
 
     return (  

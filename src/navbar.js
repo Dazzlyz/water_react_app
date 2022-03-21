@@ -6,7 +6,7 @@ const Navbar = () => {
             <h1>Menu</h1>
             <div className= 'links'>
                 <Link to='/'>Home </Link>
-                <Link to='/allreadings'>All readings</Link>                
+                <Link to='/readings'>All readings</Link>                
                 <Link to='/2hours'>Last 2 hours</Link>
                 <Link to='/2days'>Last 2 days</Link>
                 <Link to='/contact'>Contact</Link>

@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import useFetch from "./usefetch";
+import {apiUrl} from './constants'; 
 
 const ReadingDetail = () => {
     const { id } = useParams();
-    const { data: reading, error, isPending } = useFetch('http://localhost:5000/recent/' + id);
-
+    const { data: reading, error, isPending } = useFetch(`${apiUrl}/recent/` + id);
+    
     return ( 
         <div className="readings-details ">
             { isPending && <div>Loading....</div>}
