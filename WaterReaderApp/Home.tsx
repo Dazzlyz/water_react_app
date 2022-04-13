@@ -1,8 +1,11 @@
-import { Button, StyleSheet, Text, View, Image} from 'react-native';
+import { Button, StyleSheet, Text, View, Image, Dimensions} from 'react-native';
 
 const Home = ( {navigation} ) => {
+    const dimensions = Dimensions.get('window');   
+
     return(
-        <Text> Home </Text>
+    <Image source={require('./assets/plant.jpg')} style={{ height: 500, width: dimensions.width }} />     
+                
     );
 }
 
