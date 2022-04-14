@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
+
+// update later to give full messaging capability
+
 const Contact = () => {
     const [subject, setSubject] = useState('Enter the subject here');
     const [message, setMessage] = useState('Enter your message here');

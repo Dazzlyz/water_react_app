@@ -8,6 +8,7 @@ import Contact from './Contact';
 import NotFound from './NotFound';
 import TwoHours from './TwoHours';
 import TwoDays from './TwoDays';
+import OneDay from './OneDay';
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
             <Route path='/readings' element={<AllReadings />} />             
             <Route path='/readings/:id' element={<ReadingDetail/>} />     
             <Route path='/2hours' element={<TwoHours/>} />  
+            <Route path='/1day' element={<OneDay/>} />  
             <Route path='/2days' element={<TwoDays/>} />   
             <Route path='/contact' element={<Contact/>} />       
             <Route path='*' element={<NotFound/>} />            

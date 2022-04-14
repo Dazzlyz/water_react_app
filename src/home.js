@@ -1,13 +1,7 @@
-import Reading from "./Readings";
+import plant from "./assests/plant.jpg"
 
 const Home = () => {
-    return(
-        <Reading
-            link = '/recent1' 
-            name = 'home' 
-            title = 'Past 24 hours' 
-        />   
-    );
+    return <img src={plant} alt="plant" style={{ height: 500, width: 500 }} />;    
 }
 
 export default Home;

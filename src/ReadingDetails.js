@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import useFetch from "./usefetch";
 import {apiUrl} from './constants'; 
 
+// create different layout for viewing individual readings 
+
 const ReadingDetail = () => {
     const { id } = useParams();
     const { data: reading, error, isPending } = useFetch(`${apiUrl}/recent/` + id);

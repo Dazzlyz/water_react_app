@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+// creating own usefetch hook that does error catching 
+
 const useFetch = (url) => {
     const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);

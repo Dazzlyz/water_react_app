@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+// 404 not found
+
 const NotFound = () => {
     return (  
         <div className="not-found">

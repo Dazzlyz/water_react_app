@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+// create layout for showing readings
+
 const ReadingList = ({readings, title}) => {     
     
     return (
